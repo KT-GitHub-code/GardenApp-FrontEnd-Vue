@@ -1,6 +1,16 @@
 <template>
-    <div>
-      {{plant.type}} {{plant.id}}
+    <div className='container'>    
+      <div className='card-container'>
+        <div className='image-container'>
+          <img src="leaf-green-plant-tree-grass-PnQcaVDj.jpg" width="200" height="200" alt=""/>
+        </div>
+        <div className='card-content'>
+          <div className='card-title'>
+            {{plant.type}}
+          </div>
+
+        </div>
+      </div>
     </div>
 </template>
 
@@ -13,3 +23,38 @@ export default {
   }
 }
 </script>
+
+<style>
+.container{
+    display: inline-flex;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.card-container{
+    width: 300px;
+    overflow: hidden;
+    transition: 0.5s;
+    animation: ease-in;
+    box-shadow: 0px 0px 15px -5px;
+}
+
+.card-container:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px 0px;
+}
+
+.image-container{
+    overflow: hidden;
+    height: 200px;
+}
+
+.card-content{
+    margin: 1rem;
+    margin-top: 0.5rem;
+}
+
+.card-title{
+    margin-bottom: 0.5rem;
+}
+</style>

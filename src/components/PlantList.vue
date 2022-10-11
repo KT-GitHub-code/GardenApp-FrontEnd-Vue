@@ -1,5 +1,5 @@
 <template>
-    <div :key="plant.id" v-for="plant in plants">
+    <div className='container' :key="plant.id" v-for="plant in plants">
         <Plant :plant="plant"/>
     </div>
 </template>
