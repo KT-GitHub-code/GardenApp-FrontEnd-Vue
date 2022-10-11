@@ -3,7 +3,10 @@
         <div className='container' :key="plant.id" v-for="plant in plants">
         <Plant :plant="plant"/>
         </div>
-        <NewPlant className='container'/>    
+        <router-link to="/garden/newplant">
+            <NewPlant className='container' /> 
+        </router-link>
+           
     </div>
 
 </template>
@@ -20,3 +23,10 @@ export default {
     components: { Plant, NewPlant }
 }
 </script>
+
+<style>
+a, a:hover, a:focus, a:active {
+text-decoration: none;
+color: inherit;
+}
+</style>
